@@ -2,14 +2,13 @@ import streamlit as st
 import cohere
 
 def generate_blog_content(api_key, topic, length=300):
-    co = cohere.Client(api_key)
-    response = co.generate(
-        model='command',
-        prompt=f'Write a blog post about {topic}.',
+    co = cohere.ClientV2(api_key)
+    response = co.chat(
+        model='command-r',
+        messages=[{"role": "user", "content": f"Write a blog post about {topic}."}],
         max_tokens=length,
-        temperature=0.7
     )
-    return response.generations[0].text
+    return response.message.content[0].text
 
 def main():
     st.title('Blog Content Generator with Cohere API')

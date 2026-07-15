@@ -1,10 +1,18 @@
 import streamlit as st
 import cohere
 
-def generate_blog_content(api_key, topic, length=300):
+COMPATIBLE_COHERE_MODELS = [
+    "command-a-03-2025",
+    "command-r-plus-08-2024",
+    "command-r-08-2024",
+    "command-r7b-12-2024",
+]
+
+
+def generate_blog_content(api_key, topic, model, length=300):
     co = cohere.ClientV2(api_key)
     response = co.chat(
-        model='command-r',
+        model=model,
         messages=[{"role": "user", "content": f"Write a blog post about {topic}."}],
         max_tokens=length,
     )
@@ -14,6 +22,11 @@ def main():
     st.title('Blog Content Generator with Cohere API')
     api_key = st.text_input('Enter your Cohere API Key', type='password')
     topic = st.text_input('Enter the blog topic')
+    model = st.selectbox(
+        'Select Cohere model',
+        COMPATIBLE_COHERE_MODELS,
+        index=0,
+    )
     length = st.number_input('Desired length of the blog (words)', min_value=100, max_value=1000, value=300)
 
     if st.button('Generate Blog'):
@@ -21,7 +34,7 @@ def main():
             st.error('Please provide both API Key and a topic.')
         else:
             try:
-                blog_content = generate_blog_content(api_key, topic, length)
+                blog_content = generate_blog_content(api_key, topic, model, length)
                 st.subheader('Generated Blog Content')
                 st.write(blog_content)
             except Exception as e:

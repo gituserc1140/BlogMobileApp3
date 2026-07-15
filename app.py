@@ -19,6 +19,10 @@ def generate_blog_content(api_key, topic, model, length=300):
     return response.message.content[0].text
 
 def main():
+    st.sidebar.markdown(
+        '[![GitHub](https://img.shields.io/badge/GitHub-Repo-181717?logo=github&logoColor=white)](https://github.com/gituserc1140/BlogMobileApp3)',
+        unsafe_allow_html=True,
+    )
     st.title('Blog Content Generator with Cohere API')
     api_key = st.text_input('Enter your Cohere API Key', type='password')
     topic = st.text_input('Enter the blog topic')

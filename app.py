@@ -1,4 +1,6 @@
+import json
 import streamlit as st
+import streamlit.components.v1 as components
 import cohere
 
 COMPATIBLE_COHERE_MODELS = [
@@ -34,11 +36,29 @@ def main():
             st.error('Please provide both API Key and a topic.')
         else:
             try:
-                blog_content = generate_blog_content(api_key, topic, model, length)
-                st.subheader('Generated Blog Content')
-                st.write(blog_content)
+                st.session_state['blog_content'] = generate_blog_content(api_key, topic, model, length)
             except Exception as e:
                 st.error(f'An error occurred: {e}')
+
+    if 'blog_content' in st.session_state:
+        st.subheader('Generated Blog Content')
+        st.write(st.session_state['blog_content'])
+        content_json = json.dumps(st.session_state['blog_content'])
+        components.html(
+            f"""
+            <button id="copy-btn" onclick="
+                navigator.clipboard.writeText({content_json}).then(function() {{
+                    var btn = document.getElementById('copy-btn');
+                    btn.innerText = 'Copied!';
+                    setTimeout(function() {{ btn.innerText = 'Copy to Clipboard'; }}, 2000);
+                }});
+            " style="cursor:pointer;padding:8px 16px;background:#4CAF50;color:white;
+                     border:none;border-radius:4px;font-size:14px;">
+                Copy to Clipboard
+            </button>
+            """,
+            height=50,
+        )
 
 if __name__ == '__main__':
     main()

@@ -47,11 +47,19 @@ def main():
         components.html(
             f"""
             <button id="copy-btn" onclick="
-                navigator.clipboard.writeText({content_json}).then(function() {{
-                    var btn = document.getElementById('copy-btn');
-                    btn.innerText = 'Copied!';
-                    setTimeout(function() {{ btn.innerText = 'Copy to Clipboard'; }}, 2000);
-                }});
+                var text = {content_json};
+                var ta = document.createElement('textarea');
+                ta.value = text;
+                ta.style.position = 'fixed';
+                ta.style.opacity = '0';
+                document.body.appendChild(ta);
+                ta.focus();
+                ta.select();
+                document.execCommand('copy');
+                document.body.removeChild(ta);
+                var btn = document.getElementById('copy-btn');
+                btn.innerText = 'Copied!';
+                setTimeout(function() {{ btn.innerText = 'Copy to Clipboard'; }}, 2000);
             " style="cursor:pointer;padding:8px 16px;background:#4CAF50;color:white;
                      border:none;border-radius:4px;font-size:14px;">
                 Copy to Clipboard

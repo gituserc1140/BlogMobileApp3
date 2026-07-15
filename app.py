@@ -1,6 +1,4 @@
-import json
 import streamlit as st
-import streamlit.components.v1 as components
 import cohere
 
 COMPATIBLE_COHERE_MODELS = [
@@ -43,29 +41,11 @@ def main():
     if 'blog_content' in st.session_state:
         st.subheader('Generated Blog Content')
         st.write(st.session_state['blog_content'])
-        content_json = json.dumps(st.session_state['blog_content'])
-        components.html(
-            f"""
-            <button id="copy-btn" onclick="
-                var text = {content_json};
-                var ta = document.createElement('textarea');
-                ta.value = text;
-                ta.style.position = 'fixed';
-                ta.style.opacity = '0';
-                document.body.appendChild(ta);
-                ta.focus();
-                ta.select();
-                document.execCommand('copy');
-                document.body.removeChild(ta);
-                var btn = document.getElementById('copy-btn');
-                btn.innerText = 'Copied!';
-                setTimeout(function() {{ btn.innerText = 'Copy to Clipboard'; }}, 2000);
-            " style="cursor:pointer;padding:8px 16px;background:#4CAF50;color:white;
-                     border:none;border-radius:4px;font-size:14px;">
-                Copy to Clipboard
-            </button>
-            """,
-            height=50,
+        st.download_button(
+            label='Download Blog as Markdown',
+            data=st.session_state['blog_content'],
+            file_name='blog.md',
+            mime='text/markdown',
         )
 
 if __name__ == '__main__':

@@ -38,7 +38,12 @@ def main():
             try:
                 st.session_state['blog_content'] = generate_blog_content(api_key, topic, model, length)
             except Exception as e:
-                st.error(f'An error occurred: {e}')
+                if hasattr(e, 'status_code') and hasattr(e, 'body'):
+                    body = e.body
+                    message = body.get('message', str(e)) if isinstance(body, dict) else str(body)
+                    st.error(f'API Error ({e.status_code}): {message}')
+                else:
+                    st.error(f'An error occurred: {e}')
 
     if 'blog_content' in st.session_state:
         st.subheader('Generated Blog Content')

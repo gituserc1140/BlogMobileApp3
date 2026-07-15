@@ -1,5 +1,7 @@
 # Blog Content Generator with Cohere API
 
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blogmobileapp3.streamlit.app/)
+
 This Streamlit app allows users to insert their Cohere API key and generate blog content based on a given topic.
 
 ## Features

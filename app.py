@@ -14,7 +14,7 @@ _CSS = """
 <style>
 /* ── Page background ───────────────────────────────────────────── */
 [data-testid="stAppViewContainer"] {
-    background: linear-gradient(135deg, #e8f0fe, #f0f8ff, #eaf4fb);
+    background: #f4efe4;
     min-height: 100vh;
 }
 [data-testid="stHeader"] { background: transparent; }
@@ -23,86 +23,103 @@ _CSS = """
 .hero {
     text-align: center;
     padding: 2.5rem 1rem 1.5rem;
+    border-bottom: 3px double #1a1a1a;
+    margin-bottom: 1.5rem;
 }
 .hero h1 {
     font-size: 2.6rem;
-    font-weight: 800;
-    background: linear-gradient(90deg, #0d9488, #2563eb);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+    color: #1a1a1a;
+    letter-spacing: 0.04em;
     margin-bottom: 0.3rem;
+    font-family: Georgia, "Times New Roman", serif;
+    text-transform: uppercase;
 }
 .hero p {
-    color: #475569;
+    color: #4a4a4a;
     font-size: 1.05rem;
     margin-top: 0;
+    font-style: italic;
 }
 
 /* ── Blog result card ──────────────────────────────────────────── */
 .blog-card {
-    background: rgba(255,255,255,0.75);
-    border: 1px solid rgba(13,148,136,0.3);
-    border-radius: 14px;
+    background: #fdfaf4;
+    border: 1px solid #b5a98a;
+    border-top: 3px solid #1a1a1a;
+    border-radius: 2px;
     padding: 1.6rem 1.8rem;
-    color: #1e293b;
+    color: #1a1a1a;
     font-size: 1rem;
     line-height: 1.8;
     white-space: pre-wrap;
     word-break: break-word;
     margin-top: 1rem;
+    font-family: Georgia, "Times New Roman", serif;
 }
 .blog-label {
     font-size: 0.78rem;
     font-weight: 700;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: #0d9488;
+    color: #5c3d11;
     margin-bottom: 0.4rem;
+    font-family: Georgia, "Times New Roman", serif;
 }
 
 /* ── Buttons ───────────────────────────────────────────────────── */
 [data-testid="stDownloadButton"] button,
 [data-testid="stButton"] button {
-    background: linear-gradient(135deg, #0d9488, #2563eb) !important;
-    color: #fff !important;
-    border: none !important;
-    border-radius: 8px !important;
+    background: #1a1a1a !important;
+    color: #f4efe4 !important;
+    border: 2px solid #1a1a1a !important;
+    border-radius: 2px !important;
     padding: 0.45rem 1.2rem !important;
-    font-weight: 600 !important;
-    transition: opacity 0.2s !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.05em !important;
+    transition: background 0.2s, color 0.2s !important;
 }
 [data-testid="stDownloadButton"] button:hover,
-[data-testid="stButton"] button:hover { opacity: 0.85 !important; }
+[data-testid="stButton"] button:hover {
+    background: #f4efe4 !important;
+    color: #1a1a1a !important;
+}
 
 /* ── Sidebar ───────────────────────────────────────────────────── */
 [data-testid="stSidebar"] {
-    background: rgba(220,232,255,0.92);
-    border-right: 1px solid rgba(13,148,136,0.2);
+    background: #e8e0d0;
+    border-right: 2px solid #b5a98a;
 }
 [data-testid="stSidebar"] label,
 [data-testid="stSidebar"] p,
 [data-testid="stSidebar"] span,
-[data-testid="stSidebar"] div { color: #334155 !important; }
+[data-testid="stSidebar"] div { color: #1a1a1a !important; }
 [data-testid="stSidebar"] h2 {
-    color: #0d9488 !important;
+    color: #1a1a1a !important;
     font-size: 1.1rem;
+    font-family: Georgia, "Times New Roman", serif;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    border-bottom: 1px solid #b5a98a;
+    padding-bottom: 0.3rem;
 }
 
 /* ── Inputs ────────────────────────────────────────────────────── */
 [data-testid="stTextInput"] input,
 [data-testid="stTextArea"] textarea {
-    background: rgba(255,255,255,0.85) !important;
-    border: 1px solid rgba(13,148,136,0.3) !important;
-    border-radius: 8px !important;
-    color: #1e293b !important;
+    background: #fdfaf4 !important;
+    border: 1px solid #b5a98a !important;
+    border-radius: 2px !important;
+    color: #1a1a1a !important;
+    font-family: Georgia, "Times New Roman", serif;
 }
 
 /* ── Spinner text ──────────────────────────────────────────────── */
-[data-testid="stSpinner"] p { color: #0d9488 !important; }
+[data-testid="stSpinner"] p { color: #1a1a1a !important; }
 
 /* ── Sidebar collapse/expand arrow ────────────────────────────── */
 [data-testid="collapsedControl"] svg,
-[data-testid="stSidebarCollapsedControl"] svg { color: #64748b !important; opacity: 0.6; }
+[data-testid="stSidebarCollapsedControl"] svg { color: #4a4a4a !important; opacity: 0.7; }
 </style>
 """
 

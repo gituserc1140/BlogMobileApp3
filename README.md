@@ -22,7 +22,7 @@ A Streamlit web app that generates blog posts on any topic using the [Cohere](ht
 
 ## Usage
 
-1. Open the **⚙️ Settings** sidebar and enter your [Cohere API key](https://cohere.com)
+1. Open the **Settings** sidebar and enter your [Cohere API key](https://cohere.com)
 2. Select a compatible Cohere model
 3. Enter a blog topic in the main area
 4. Adjust the token length if needed

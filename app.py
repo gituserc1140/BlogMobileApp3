@@ -194,20 +194,20 @@ def main():
         if not topic:
             st.error("Please enter a blog topic.")
         else:
-            with st.spinner("Generating your blog post… ✨"):
+            with st.spinner("Generating your blog post..."):
                 try:
                     st.session_state["blog_content"] = generate_blog_content(api_key, topic, model, length)
                 except Exception as e:
                     st.error(f"An error occurred: {e}")
 
     if "blog_content" in st.session_state:
-        st.markdown('<div class="blog-label">📄 Generated Blog Post</div>', unsafe_allow_html=True)
+        st.markdown('<div class="blog-label">Generated Blog Post</div>', unsafe_allow_html=True)
         st.markdown(
             f'<div class="blog-card">{html_lib.escape(st.session_state["blog_content"])}</div>',
             unsafe_allow_html=True,
         )
         st.download_button(
-            label="⬇️ Download as Markdown",
+            label="Download as Markdown",
             data=st.session_state["blog_content"],
             file_name="blog.md",
             mime="text/markdown",

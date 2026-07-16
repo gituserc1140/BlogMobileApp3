@@ -14,7 +14,7 @@ _CSS = """
 <style>
 /* ── Page background ───────────────────────────────────────────── */
 [data-testid="stAppViewContainer"] {
-    background: linear-gradient(135deg, #0a0f1e, #0d2137, #0a1628);
+    background: linear-gradient(135deg, #e8f0fe, #f0f8ff, #eaf4fb);
     min-height: 100vh;
 }
 [data-testid="stHeader"] { background: transparent; }
@@ -27,24 +27,24 @@ _CSS = """
 .hero h1 {
     font-size: 2.6rem;
     font-weight: 800;
-    background: linear-gradient(90deg, #39d2c0, #3d8bff);
+    background: linear-gradient(90deg, #0d9488, #2563eb);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 0.3rem;
 }
 .hero p {
-    color: #94a3b8;
+    color: #475569;
     font-size: 1.05rem;
     margin-top: 0;
 }
 
 /* ── Blog result card ──────────────────────────────────────────── */
 .blog-card {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(57,210,192,0.3);
+    background: rgba(255,255,255,0.75);
+    border: 1px solid rgba(13,148,136,0.3);
     border-radius: 14px;
     padding: 1.6rem 1.8rem;
-    color: #e2e8f0;
+    color: #1e293b;
     font-size: 1rem;
     line-height: 1.8;
     white-space: pre-wrap;
@@ -56,7 +56,7 @@ _CSS = """
     font-weight: 700;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: #39d2c0;
+    color: #0d9488;
     margin-bottom: 0.4rem;
 }
 
@@ -76,33 +76,33 @@ _CSS = """
 
 /* ── Sidebar ───────────────────────────────────────────────────── */
 [data-testid="stSidebar"] {
-    background: rgba(10,15,30,0.92);
-    border-right: 1px solid rgba(57,210,192,0.2);
+    background: rgba(220,232,255,0.92);
+    border-right: 1px solid rgba(13,148,136,0.2);
 }
 [data-testid="stSidebar"] label,
 [data-testid="stSidebar"] p,
 [data-testid="stSidebar"] span,
-[data-testid="stSidebar"] div { color: #cbd5e1 !important; }
+[data-testid="stSidebar"] div { color: #334155 !important; }
 [data-testid="stSidebar"] h2 {
-    color: #39d2c0 !important;
+    color: #0d9488 !important;
     font-size: 1.1rem;
 }
 
 /* ── Inputs ────────────────────────────────────────────────────── */
 [data-testid="stTextInput"] input,
 [data-testid="stTextArea"] textarea {
-    background: rgba(255,255,255,0.06) !important;
-    border: 1px solid rgba(57,210,192,0.3) !important;
+    background: rgba(255,255,255,0.85) !important;
+    border: 1px solid rgba(13,148,136,0.3) !important;
     border-radius: 8px !important;
-    color: #e2e8f0 !important;
+    color: #1e293b !important;
 }
 
 /* ── Spinner text ──────────────────────────────────────────────── */
-[data-testid="stSpinner"] p { color: #39d2c0 !important; }
+[data-testid="stSpinner"] p { color: #0d9488 !important; }
 
 /* ── Sidebar collapse/expand arrow ────────────────────────────── */
 [data-testid="collapsedControl"] svg,
-[data-testid="stSidebarCollapsedControl"] svg { color: #94a3b8 !important; opacity: 0.5; }
+[data-testid="stSidebarCollapsedControl"] svg { color: #64748b !important; opacity: 0.6; }
 </style>
 """
 

@@ -126,9 +126,7 @@ def main():
         """
         <div class="hero">
             <h1>✍️ Blog Content Generator</h1>
-            <p>Powered by the <a href="https://cohere.com" target="_blank"
-               style="color:#39d2c0;text-decoration:none;">Cohere AI</a> API —
-               craft compelling blog posts in seconds.</p>
+            <p>craft compelling blog posts in seconds.</p>
         </div>
         """,
         unsafe_allow_html=True,

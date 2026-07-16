@@ -135,7 +135,7 @@ def main():
     )
 
     # ── Sidebar (settings panel) ───────────────────────────────────
-    st.sidebar.header("⚙️ Settings")
+    st.sidebar.header("Settings")
 
     api_key = st.sidebar.text_input(
         "Cohere API Key",
@@ -158,9 +158,6 @@ def main():
 
     st.sidebar.markdown("---")
     st.sidebar.markdown(
-        "[![Cohere](https://img.shields.io/badge/Powered%20by-Cohere-39d2c0?style=flat-square)](https://cohere.com)"
-    )
-    st.sidebar.markdown(
         "[![GitHub](https://img.shields.io/badge/View%20on-GitHub-181717?logo=github&style=flat-square)](https://github.com/gituserc1140/BlogMobileApp3)"
     )
     st.sidebar.markdown(
@@ -169,7 +166,7 @@ def main():
 
     # ── Main content ───────────────────────────────────────────────
     if not api_key:
-        st.info("👈 Enter your Cohere API key in the sidebar to get started.", icon=None)
+        st.info("Enter your Cohere API key in the sidebar to get started.", icon=None)
         st.stop()
 
     topic = st.text_input("📝 Blog topic", placeholder="e.g. The future of renewable energy")

@@ -9,11 +9,11 @@ A Streamlit web app that generates blog posts on any topic using the [Cohere](ht
 
 ## Features
 
-- 🔑 API key entered securely in the sidebar settings panel
-- 🤖 Choose from multiple [Cohere](https://cohere.com) command models
-- 📝 Enter any blog topic and set your desired length
-- ✨ Generate polished blog content with one click
-- ⬇️ Download the result as a Markdown file
+- API key entered securely in the sidebar settings panel
+- Choose from multiple [Cohere](https://cohere.com) command models
+- Enter any blog topic and set your desired length
+- Generate polished blog content with one click
+- Download the result as a Markdown file
 
 ## Setup
 
@@ -27,7 +27,7 @@ A Streamlit web app that generates blog posts on any topic using the [Cohere](ht
 2. Select a compatible Cohere model
 3. Enter a blog topic in the main area
 4. Adjust the token length if needed
-5. Click **✨ Generate Blog** to see your post
+5. Click **Generate Blog** to see your post
 
 ## Notes
 

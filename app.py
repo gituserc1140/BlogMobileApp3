@@ -137,7 +137,7 @@ def generate_blog_content(api_key, topic, model, length=300):
 def main():
     st.set_page_config(
         page_title="Blog Content Generator",
-        page_icon="✍️",
+        page_icon=None,
         layout="centered",
     )
     st.markdown(_CSS, unsafe_allow_html=True)
@@ -146,7 +146,7 @@ def main():
     st.markdown(
         """
         <div class="hero">
-            <h1>✍️ Blog Content Generator</h1>
+            <h1>Blog Content Generator</h1>
             <p>craft compelling blog posts in seconds.</p>
         </div>
         """,

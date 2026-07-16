@@ -99,6 +99,10 @@ _CSS = """
 
 /* ── Spinner text ──────────────────────────────────────────────── */
 [data-testid="stSpinner"] p { color: #39d2c0 !important; }
+
+/* ── Sidebar collapse/expand arrow ────────────────────────────── */
+[data-testid="collapsedControl"] svg,
+[data-testid="stSidebarCollapsedControl"] svg { color: #94a3b8 !important; opacity: 0.5; }
 </style>
 """
 
@@ -167,9 +171,9 @@ def main():
         st.info("Enter your Cohere API key in the sidebar to get started.", icon=None)
         st.stop()
 
-    topic = st.text_input("📝 Blog topic", placeholder="e.g. The future of renewable energy")
+    topic = st.text_input("Blog topic", placeholder="e.g. The future of renewable energy")
 
-    if st.button("✨ Generate Blog"):
+    if st.button("Generate Blog"):
         if not topic:
             st.error("Please enter a blog topic.")
         else:

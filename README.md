@@ -1,7 +1,6 @@
 # Blog Content Generator with Cohere AI
 
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blogmobileapp3.streamlit.app/)
-[![Powered by Cohere](https://img.shields.io/badge/Powered%20by-Cohere-39d2c0?style=flat-square)](https://cohere.com)
 [![GitHub](https://img.shields.io/badge/View%20on-GitHub-181717?logo=github&style=flat-square)](https://github.com/gituserc1140/BlogMobileApp3)
 [![Sponsor me on GitHub](https://img.shields.io/badge/Sponsor%20me%20on-GitHub-EA4AAA?logo=githubsponsors&style=flat-square)](https://github.com/sponsors/gituserc1140)
 

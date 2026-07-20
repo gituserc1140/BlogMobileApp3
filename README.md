@@ -1,4 +1,4 @@
-# Blog Content Generator with Cohere AI
+# Blog Content Generator 
 
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blogmobileapp3.streamlit.app/)
 [![GitHub](https://img.shields.io/badge/View%20on-GitHub-181717?logo=github&style=flat-square)](https://github.com/gituserc1140/BlogMobileApp3)
